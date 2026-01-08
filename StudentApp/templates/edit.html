@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Student</title>
+</head>
+<body>
+
+<h1>Edit Student Details</h1>
+<hr>
+
+<form action="{{ url_for('update_student', rollno=student[0]) }}" method="POST">
+    <table>
+        <tr>
+            <td>Roll No</td>
+            <td>
+                <input type="text" name="rollno" value="{{ student[0] }}" readonly>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Name</td>
+            <td>
+                <input type="text" name="name" value="{{ student[1] }}" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Course</td>
+            <td>
+                <input type="text" name="course" value="{{ student[2] }}" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Duration</td>
+            <td>
+                <input type="text" name="duration" value="{{ student[3] }}" required>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="Update Student">
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

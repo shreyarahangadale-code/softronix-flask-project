@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sketch2UI – Upload</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="container">
+    <h1>Sketch2UI</h1>
+    <p class="subtitle">Upload your hand-drawn sketch</p>
+
+    <form
+      class="card"
+      method="POST"
+      action="/api/process-sketch"
+      enctype="multipart/form-data"
+    >
+      <label class="upload-box">
+        <input
+          type="file"
+          name="image"
+          accept="image/png,image/jpeg"
+          required
+        />
+        <span>Click to upload sketch</span>
+        <small>PNG or JPG only</small>
+      </label>
+
+      <button type="submit">Generate UI</button>
+    </form>
+  </main>
+
+</body>
+</html>
